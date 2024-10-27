@@ -61,7 +61,7 @@ public class SendMoneyService implements SendMoneyUseCase {
 
         accountLock.releaseAccount(sourceAccountId);
         accountLock.releaseAccount(targetAccountId);
-        return false;
+        return true;
     }
 
     private void checkThreshold(SendMoneyCommand command) {
